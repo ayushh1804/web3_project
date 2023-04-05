@@ -3,7 +3,7 @@ import { AiFillAlipayCircle } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { SiEthereum } from "react-icons/si";
 
-import { Loader } from "./Loader"
+import  Loader  from "./Loader";
 const commonStyles =
   "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
@@ -21,7 +21,7 @@ const Welcome = () => {
     );
   };
   const connectWallet = () => {};
-const handleSubmit = () => {}
+  const handleSubmit = () => {};
   return (
     <div className="flex w-full justify-center items-center">
       <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
@@ -101,7 +101,17 @@ const handleSubmit = () => {}
               handleChange={() => {}}
             />
             <div className="h-[1px] w-full bg-gray-400 my-2" />
-            {false ? <Loader /> : <button type="button" onClick={handleSubmit} className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"></button>}
+            {false ? (
+              <Loader />
+            ) : (
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
+              >
+                Send Now
+              </button>
+            )}
           </div>
         </div>
       </div>
